@@ -13,6 +13,8 @@ jobs:
           node-version: 8.15.1
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v2
+      - name: Print ACCESS_TOKEN
+        run: echo "ACCESS_TOKEN is ${{ secrets.ACCESS_TOKEN }}"
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
         env:
@@ -21,5 +23,3 @@ jobs:
           BRANCH: master
           FOLDER: dist/ang-website
           BUILD_SCRIPT: npm install && npm run build -- --prod
-      - name: Print ACCESS_TOKEN
-        run: echo "ACCESS_TOKEN is ${{ secrets.ACCESS_TOKEN }}"
