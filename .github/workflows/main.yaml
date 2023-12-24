@@ -20,7 +20,7 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
         env:
-          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          PERSONAL_TOKEN: "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"
           BASE_BRANCH: master
           BRANCH: master
           FOLDER: dist/ang-website
