@@ -21,3 +21,5 @@ jobs:
           BRANCH: master
           FOLDER: dist/ang-website
           BUILD_SCRIPT: npm install && npm run build -- --prod
+      - name: Print ACCESS_TOKEN
+        run: echo "ACCESS_TOKEN is ${{ secrets.ACCESS_TOKEN }}"
